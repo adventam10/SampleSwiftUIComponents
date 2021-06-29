@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  SwiftUIComponents
+
+  Created by am10 on 2021/06/30.
+  
+*/
+"hoge" = "Hoge";
+"fuga" = "Fuga";
