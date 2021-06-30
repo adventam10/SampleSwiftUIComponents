@@ -15,7 +15,8 @@ struct ValueIndicatorsView: View {
             Label("Trash", systemImage: "trash")
 
             HeaderView(text: "ProgressView")
-            ProgressView(value: 0.5)
+            ProgressView("Linear", value: 0.5).progressViewStyle(LinearProgressViewStyle())
+            ProgressView("Circular", value: 0.5).progressViewStyle(CircularProgressViewStyle())
         }.navigationTitle("Value Indicators")
     }
 }
