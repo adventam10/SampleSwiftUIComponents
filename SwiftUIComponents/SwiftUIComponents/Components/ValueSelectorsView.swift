@@ -13,6 +13,7 @@ struct ValueSelectorsView: View {
     @State private var sliderValue = 50.0
     @State private var stepValue = 50.0
     @State private var pickerValue = 1
+    @State private var pickerMenuValue = 1
     @State private var date = Date()
     @State private var color = Color(.systemBlue)
 
@@ -39,12 +40,32 @@ struct ValueSelectorsView: View {
                 }
                 Group {
                     HeaderView(text: "Picker")
-                    Picker("Value", selection: $pickerValue) {
+                    SubHeaderView(text: "Inline")
+                    Picker("Inline", selection: $pickerValue) {
                         Text("Value1").tag(0)
                         Text("Value2").tag(1)
                         Text("Value3").tag(2)
-                    }
-
+                    }.pickerStyle(InlinePickerStyle())
+                    SubHeaderView(text: "Segmented")
+                    Picker("Segmented", selection: $pickerValue) {
+                        Text("Value1").tag(0)
+                        Text("Value2").tag(1)
+                        Text("Value3").tag(2)
+                    }.pickerStyle(SegmentedPickerStyle())
+                    SubHeaderView(text: "Menu")
+                    Picker("Menu", selection: $pickerValue) {
+                        Text("Value1").tag(0)
+                        Text("Value2").tag(1)
+                        Text("Value3").tag(2)
+                    }.pickerStyle(MenuPickerStyle())
+                    SubHeaderView(text: "Wheel")
+                    Picker("Wheel", selection: $pickerValue) {
+                        Text("Value1").tag(0)
+                        Text("Value2").tag(1)
+                        Text("Value3").tag(2)
+                    }.pickerStyle(WheelPickerStyle())
+                }
+                Group {
                     HeaderView(text: "DatePicker")
                     DatePicker(
                         "Date",
