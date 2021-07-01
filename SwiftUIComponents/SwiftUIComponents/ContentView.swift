@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum ComponentsMenu: Int, CaseIterable, Identifiable {
+enum ViewsAndControlsMenu: Int, CaseIterable, Identifiable {
 
     case text
     case images
@@ -44,17 +44,69 @@ enum ComponentsMenu: Int, CaseIterable, Identifiable {
     }
 }
 
+enum LayoutAndPresentationMenu: Int, CaseIterable, Identifiable {
+
+    case stacks
+    case lazyStacks
+    case grids
+    case containers
+    case scrollViews
+    case lists
+    case tables
+    case hierarchicalViews
+    case scheduledViewUpdates
+    case spacersAndDividers
+
+    var title: String {
+        switch self {
+        case .stacks:
+            return "Stacks"
+        case .lazyStacks:
+            return "Lazy Stacks"
+        case .grids:
+            return "Grids"
+        case .containers:
+            return "Containers"
+        case .scrollViews:
+            return "Scroll Views"
+        case .lists:
+            return "Lists"
+        case .tables:
+            return "Tables"
+        case .hierarchicalViews:
+            return "Hierarchical Views"
+        case .scheduledViewUpdates:
+            return "Scheduled View Updates"
+        case .spacersAndDividers:
+            return "Spacers and Dividers"
+        }
+    }
+
+    var id: Int {
+        return rawValue
+    }
+}
+
 struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            List(ComponentsMenu.allCases) { menu in
-                self.containedView(menu: menu)
+            List {
+                Section(header: Text("Views and Controls")) {
+                    ForEach(ViewsAndControlsMenu.allCases) { menu in
+                        self.containedView(menu: menu)
+                    }
+                }
+                Section(header: Text("View Layout and Presentation")) {
+                    ForEach(LayoutAndPresentationMenu.allCases) { menu in
+                        self.containedView(menu: menu)
+                    }
+                }
             }
         }
     }
 
-    private func containedView(menu: ComponentsMenu) -> AnyView {
+    private func containedView(menu: ViewsAndControlsMenu) -> AnyView {
         switch menu {
         case .text:
             return AnyView(NavigationLink(destination: TextsView()) { Text(menu.title) })
@@ -72,6 +124,31 @@ struct ContentView: View {
             return AnyView(NavigationLink(destination: LocalizationView()) { Text(menu.title) })
         case .infrequentlyUsedViews:
             return AnyView(NavigationLink(destination: InfrequentlyUsedViewsView()) { Text(menu.title) })
+        }
+    }
+
+    private func containedView(menu: LayoutAndPresentationMenu) -> AnyView {
+        switch menu {
+        case .stacks:
+            return AnyView(NavigationLink(destination: StacksView()) { Text(menu.title) })
+        case .lazyStacks:
+            return AnyView(NavigationLink(destination: LazyStacksView()) { Text(menu.title) })
+        case .grids:
+            return AnyView(NavigationLink(destination: GridsView()) { Text(menu.title) })
+        case .containers:
+            return AnyView(NavigationLink(destination: ContainersView()) { Text(menu.title) })
+        case .scrollViews:
+            return AnyView(NavigationLink(destination: ScrollViewsView()) { Text(menu.title) })
+        case .lists:
+            return AnyView(NavigationLink(destination: ListsView()) { Text(menu.title) })
+        case .tables:
+            return AnyView(NavigationLink(destination: TablesView()) { Text(menu.title) })
+        case .hierarchicalViews:
+            return AnyView(NavigationLink(destination: HierarchicalViewsView()) { Text(menu.title) })
+        case .scheduledViewUpdates:
+            return AnyView(NavigationLink(destination: ScheduledViewUpdatesView()) { Text(menu.title) })
+        case .spacersAndDividers:
+            return AnyView(NavigationLink(destination: SpacersAndDividersView()) { Text(menu.title) })
         }
     }
 }

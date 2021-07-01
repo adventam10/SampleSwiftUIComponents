@@ -21,6 +21,16 @@
 		0ED25558268B9EBF00B07C21 /* LocalizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25557268B9EBF00B07C21 /* LocalizationView.swift */; };
 		0ED2555B268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2555A268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift */; };
 		0ED25561268BCE3100B07C21 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0ED25563268BCE3100B07C21 /* Localizable.strings */; };
+		0ED2556B268CD65D00B07C21 /* StacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2556A268CD65D00B07C21 /* StacksView.swift */; };
+		0ED2556F268CD68C00B07C21 /* LazyStacksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2556E268CD68C00B07C21 /* LazyStacksView.swift */; };
+		0ED25572268CD6A100B07C21 /* GridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25571268CD6A100B07C21 /* GridsView.swift */; };
+		0ED25575268CD6B300B07C21 /* ContainersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25574268CD6B300B07C21 /* ContainersView.swift */; };
+		0ED25578268CD6D100B07C21 /* ScrollViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25577268CD6D100B07C21 /* ScrollViewsView.swift */; };
+		0ED2557B268CD6E500B07C21 /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2557A268CD6E500B07C21 /* ListsView.swift */; };
+		0ED2557E268CD6F000B07C21 /* TablesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2557D268CD6F000B07C21 /* TablesView.swift */; };
+		0ED25581268CD71200B07C21 /* HierarchicalViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25580268CD71200B07C21 /* HierarchicalViewsView.swift */; };
+		0ED25584268CD73400B07C21 /* ScheduledViewUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25583268CD73400B07C21 /* ScheduledViewUpdatesView.swift */; };
+		0ED25587268CD74B00B07C21 /* SpacersAndDividersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25586268CD74B00B07C21 /* SpacersAndDividersView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +51,16 @@
 		0ED2555A268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfrequentlyUsedViewsView.swift; sourceTree = "<group>"; };
 		0ED25562268BCE3100B07C21 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0ED25565268BCE3500B07C21 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0ED2556A268CD65D00B07C21 /* StacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksView.swift; sourceTree = "<group>"; };
+		0ED2556E268CD68C00B07C21 /* LazyStacksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyStacksView.swift; sourceTree = "<group>"; };
+		0ED25571268CD6A100B07C21 /* GridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridsView.swift; sourceTree = "<group>"; };
+		0ED25574268CD6B300B07C21 /* ContainersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainersView.swift; sourceTree = "<group>"; };
+		0ED25577268CD6D100B07C21 /* ScrollViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewsView.swift; sourceTree = "<group>"; };
+		0ED2557A268CD6E500B07C21 /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
+		0ED2557D268CD6F000B07C21 /* TablesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesView.swift; sourceTree = "<group>"; };
+		0ED25580268CD71200B07C21 /* HierarchicalViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchicalViewsView.swift; sourceTree = "<group>"; };
+		0ED25583268CD73400B07C21 /* ScheduledViewUpdatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledViewUpdatesView.swift; sourceTree = "<group>"; };
+		0ED25586268CD74B00B07C21 /* SpacersAndDividersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpacersAndDividersView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +116,32 @@
 		0ED25546268B9E4000B07C21 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0ED25569268CD62D00B07C21 /* ViewsAndControls */,
+				0ED25568268CD61000B07C21 /* LayoutAndPresentation */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0ED25568268CD61000B07C21 /* LayoutAndPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				0ED2556A268CD65D00B07C21 /* StacksView.swift */,
+				0ED2556E268CD68C00B07C21 /* LazyStacksView.swift */,
+				0ED25571268CD6A100B07C21 /* GridsView.swift */,
+				0ED25574268CD6B300B07C21 /* ContainersView.swift */,
+				0ED25577268CD6D100B07C21 /* ScrollViewsView.swift */,
+				0ED2557A268CD6E500B07C21 /* ListsView.swift */,
+				0ED2557D268CD6F000B07C21 /* TablesView.swift */,
+				0ED25580268CD71200B07C21 /* HierarchicalViewsView.swift */,
+				0ED25583268CD73400B07C21 /* ScheduledViewUpdatesView.swift */,
+				0ED25586268CD74B00B07C21 /* SpacersAndDividersView.swift */,
+			);
+			path = LayoutAndPresentation;
+			sourceTree = "<group>";
+		};
+		0ED25569268CD62D00B07C21 /* ViewsAndControls */ = {
+			isa = PBXGroup;
+			children = (
 				0ED25540268B97AD00B07C21 /* TextsView.swift */,
 				0ED25547268B9E5700B07C21 /* ImagesView.swift */,
 				0ED2554B268B9E6A00B07C21 /* ButtonsView.swift */,
@@ -105,7 +151,7 @@
 				0ED25557268B9EBF00B07C21 /* LocalizationView.swift */,
 				0ED2555A268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift */,
 			);
-			path = Components;
+			path = ViewsAndControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,12 +229,22 @@
 				0ED2554C268B9E6A00B07C21 /* ButtonsView.swift in Sources */,
 				0ED25531268AF05F00B07C21 /* ContentView.swift in Sources */,
 				0ED25541268B97AD00B07C21 /* TextsView.swift in Sources */,
+				0ED25575268CD6B300B07C21 /* ContainersView.swift in Sources */,
 				0ED2555B268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift in Sources */,
 				0ED2552F268AF05F00B07C21 /* SwiftUIComponentsApp.swift in Sources */,
+				0ED25581268CD71200B07C21 /* HierarchicalViewsView.swift in Sources */,
+				0ED2556F268CD68C00B07C21 /* LazyStacksView.swift in Sources */,
+				0ED25578268CD6D100B07C21 /* ScrollViewsView.swift in Sources */,
 				0ED25558268B9EBF00B07C21 /* LocalizationView.swift in Sources */,
+				0ED2557B268CD6E500B07C21 /* ListsView.swift in Sources */,
+				0ED2556B268CD65D00B07C21 /* StacksView.swift in Sources */,
 				0ED25555268B9EAC00B07C21 /* ValueIndicatorsView.swift in Sources */,
+				0ED25584268CD73400B07C21 /* ScheduledViewUpdatesView.swift in Sources */,
+				0ED25587268CD74B00B07C21 /* SpacersAndDividersView.swift in Sources */,
+				0ED2557E268CD6F000B07C21 /* TablesView.swift in Sources */,
 				0ED25544268B97DB00B07C21 /* HeaderView.swift in Sources */,
 				0ED25548268B9E5700B07C21 /* ImagesView.swift in Sources */,
+				0ED25572268CD6A100B07C21 /* GridsView.swift in Sources */,
 				0ED25552268B9E9400B07C21 /* ValueSelectorsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
