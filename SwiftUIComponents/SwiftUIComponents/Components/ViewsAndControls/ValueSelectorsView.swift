@@ -22,24 +22,38 @@ struct ValueSelectorsView: View {
             VStack {
                 Group {
                     HeaderView(text: "Toggle")
+                    SubHeaderView(text: "Default")
                     Toggle("Toggle", isOn: $isOn)
-
-                    HeaderView(text: "Slider")
-                    Slider(
-                        value: $sliderValue,
-                        in: 0...100,
-                        onEditingChanged: { editing in
-                            print("editing: \(editing), value: \(sliderValue)")
-                        }
-                    )
-
-                    HeaderView(text: "Stepper")
-                    Stepper("Stepper", value: $stepValue, step: 5) { editing in
-                        print("editing: \(editing), value: \(stepValue)")
+                        .toggleStyle(DefaultToggleStyle())
+                    SubHeaderView(text: "Switch")
+                    Toggle("Toggle", isOn: $isOn)
+                        .toggleStyle(SwitchToggleStyle())
+                    // ButtonToggleStyle（iOS15以上）
+                    // CheckboxToggleStyle（macOS用）
+                }
+                HeaderView(text: "Slider")
+                Slider(
+                    value: $sliderValue,
+                    in: 0...100,
+                    onEditingChanged: { editing in
+                        print("editing: \(editing), value: \(sliderValue)")
                     }
+                )
+
+                HeaderView(text: "Stepper")
+                Stepper("Stepper", value: $stepValue, step: 5) { editing in
+                    print("editing: \(editing), value: \(stepValue)")
                 }
                 Group {
-                    HeaderView(text: "Picker")
+                    Group {
+                        HeaderView(text: "Picker")
+                        SubHeaderView(text: "Default")
+                        Picker("Default", selection: $pickerValue) {
+                            Text("Value1").tag(0)
+                            Text("Value2").tag(1)
+                            Text("Value3").tag(2)
+                        }.pickerStyle(DefaultPickerStyle())
+                    }
                     SubHeaderView(text: "Inline")
                     Picker("Inline", selection: $pickerValue) {
                         Text("Value1").tag(0)
@@ -64,15 +78,38 @@ struct ValueSelectorsView: View {
                         Text("Value2").tag(1)
                         Text("Value3").tag(2)
                     }.pickerStyle(WheelPickerStyle())
+                    // RadioGroupPickerStyle（macOS用）
                 }
                 Group {
                     HeaderView(text: "DatePicker")
+                    SubHeaderView(text: "Default")
                     DatePicker(
-                        "Date",
+                        "Default",
                         selection: $date,
                         displayedComponents: [.date, .hourAndMinute]
-                    )
-
+                    ).datePickerStyle(DefaultDatePickerStyle())
+                    SubHeaderView(text: "Compact")
+                    DatePicker(
+                        "Compact",
+                        selection: $date,
+                        displayedComponents: [.date, .hourAndMinute]
+                    ).datePickerStyle(CompactDatePickerStyle())
+                    SubHeaderView(text: "Graphical")
+                    DatePicker(
+                        "Graphical",
+                        selection: $date,
+                        displayedComponents: [.date, .hourAndMinute]
+                    ).datePickerStyle(GraphicalDatePickerStyle())
+                    SubHeaderView(text: "Wheel")
+                    DatePicker(
+                        "Wheel",
+                        selection: $date,
+                        displayedComponents: [.date, .hourAndMinute]
+                    ).datePickerStyle(WheelDatePickerStyle())
+                    // FieldDatePickerStyle（macOS用）
+                    // StepperFieldDatePickerStyle（macOS用）
+                }
+                Group {
                     HeaderView(text: "ColorPicker")
                     ColorPicker("Color", selection: $color, supportsOpacity: true)
                 }

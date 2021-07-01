@@ -18,13 +18,23 @@ struct TextsView: View {
             HeaderView(text: "Text")
             Text("Hello, world!")
 
-            HeaderView(text: "TextField")
-            TextField("PlaceHolder",text: $text) { isEditing in
-                // 編集開始と終了時呼ばれる
-                print(isEditing)
-            } onCommit: {
-                // returnキー押下時に呼ばれる
-                print("Commit")
+            Group {
+                HeaderView(text: "TextField")
+                SubHeaderView(text: "Default")
+                TextField("PlaceHolder", text: $text) { isEditing in
+                    // 編集開始と終了時呼ばれる
+                    print(isEditing)
+                } onCommit: {
+                    // returnキー押下時に呼ばれる
+                    print("Commit")
+                }.textFieldStyle(DefaultTextFieldStyle())
+                SubHeaderView(text: "Plain")
+                TextField("PlaceHolder", text: $text)
+                    .textFieldStyle(PlainTextFieldStyle())
+                SubHeaderView(text: "RoundedBorder")
+                TextField("PlaceHolder", text: $text)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                // SquareBorderTextFieldStyle（macOS用）
             }
 
             HeaderView(text: "SecureField")

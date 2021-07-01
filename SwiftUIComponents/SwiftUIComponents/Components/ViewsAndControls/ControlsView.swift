@@ -14,16 +14,31 @@ struct ControlsView: View {
             HeaderView(text: "Link")
             Link("am10ぶろぐ", destination: URL(string: "https://www.am10.blog/")!)
 
-            HeaderView(text: "Menu")
-            Menu("Piyo") {
-                Button("Hoge") {
-                    print("hoge")
-                }
-                Menu("Foo") {
-                    Button("Fuga") {
-                        print("fuga")
+            Group {
+                HeaderView(text: "Menu")
+                SubHeaderView(text: "Default")
+                Menu("Piyo") {
+                    Button("Hoge") {
+                        print("hoge")
                     }
-                }
+                    Menu("Foo") {
+                        Button("Fuga") {
+                            print("fuga")
+                        }
+                    }
+                }.menuStyle(DefaultMenuStyle())
+                SubHeaderView(text: "BorderlessButton")
+                Menu("Piyo") {
+                    Button("Hoge") {
+                        print("hoge")
+                    }
+                    Menu("Foo") {
+                        Button("Fuga") {
+                            print("fuga")
+                        }
+                    }
+                }.menuStyle(BorderlessButtonMenuStyle())
+                // BorderedButtonMenuStyle（macOS用）
             }
         }.navigationTitle("Controls")
     }

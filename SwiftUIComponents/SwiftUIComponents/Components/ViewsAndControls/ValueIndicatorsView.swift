@@ -11,12 +11,26 @@ struct ValueIndicatorsView: View {
 
     var body: some View {
         VStack {
-            HeaderView(text: "Label")
-            Label("Trash", systemImage: "trash")
+            Group {
+                HeaderView(text: "Label")
+                SubHeaderView(text: "Default")
+                Label("Trash", systemImage: "trash")
+                    .labelStyle(DefaultLabelStyle())
+                SubHeaderView(text: "IconOnly")
+                Label("Trash", systemImage: "trash")
+                    .labelStyle(IconOnlyLabelStyle())
+                SubHeaderView(text: "TitleOnly")
+                Label("Trash", systemImage: "trash")
+                    .labelStyle(TitleOnlyLabelStyle())
+                // TitleAndIconLabelStyle（iOS14.5以上）
+            }
 
-            HeaderView(text: "ProgressView")
-            ProgressView("Linear", value: 0.5).progressViewStyle(LinearProgressViewStyle())
-            ProgressView("Circular", value: 0.5).progressViewStyle(CircularProgressViewStyle())
+            Group {
+                HeaderView(text: "ProgressView")
+                ProgressView("Default", value: 0.5).progressViewStyle(DefaultProgressViewStyle())
+                ProgressView("Linear", value: 0.5).progressViewStyle(LinearProgressViewStyle())
+                ProgressView("Circular", value: 0.5).progressViewStyle(CircularProgressViewStyle())
+            }
         }.navigationTitle("Value Indicators")
     }
 }
