@@ -8,8 +8,47 @@
 import SwiftUI
 
 struct ContainersView: View {
+
+    @State private var userAgreed = false
+
+    @State private var name: String = ""
+    @State private var birthday = Date()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).navigationTitle("Containers")
+        VStack {
+            HeaderView(text: "Form")
+            Form {
+                Section(header: Text("Profile")) {
+                    TextField("Name", text: $name)
+                    DatePicker(
+                        "Birthday",
+                        selection: $birthday,
+                        displayedComponents: [.date]
+                    )
+                }
+            }
+
+            HeaderView(text: "Group")
+            Group {
+                Text("First")
+                Text("Second")
+                Text("Third")
+            }
+            .font(.headline)
+
+            HeaderView(text: "GroupBox")
+            GroupBox(label: Label("Agreement", systemImage: "building.columns")) {
+                ScrollView {
+                    Text("agreementText\nhogehoge\nfugafuga\npiyopiyo\nfoofoo")
+                }
+                .frame(height: 100)
+                Toggle(isOn: $userAgreed) {
+                    Text("I agree")
+                }
+            }
+
+            // ControlGroup（iOS15以上）
+        }.navigationTitle("Containers")
     }
 }
 
