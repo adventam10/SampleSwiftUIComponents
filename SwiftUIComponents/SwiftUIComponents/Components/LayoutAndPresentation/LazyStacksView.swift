@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct LazyStacksView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).navigationTitle("Lazy Stacks")
+        VStack {
+            HeaderView(text: "LazyHStack")
+            ScrollView(.horizontal) {
+                LazyHStack {
+                    ForEach(1...100, id: \.self) {
+                        Text("Column \($0)")
+                    }
+                }
+            }.frame(height: 100)
+
+            HeaderView(text: "LazyVStack")
+            ScrollView {
+                LazyVStack {
+                    ForEach(1...100, id: \.self) {
+                        Text("Row \($0)")
+                    }
+                }
+            }.frame(height: 100)
+        }.navigationTitle("Lazy Stacks")
     }
 }
 
