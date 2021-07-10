@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E74B7592699FA3A008AAD87 /* ImmediateModeDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B7582699FA3A008AAD87 /* ImmediateModeDrawingView.swift */; };
+		0E74B75D2699FA4B008AAD87 /* ShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B75C2699FA4B008AAD87 /* ShapesView.swift */; };
+		0E74B7602699FA5B008AAD87 /* TransformedShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B75F2699FA5B008AAD87 /* TransformedShapesView.swift */; };
+		0E74B7632699FA6C008AAD87 /* ShapeStylesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B7622699FA6C008AAD87 /* ShapeStylesView.swift */; };
+		0E74B7662699FA7B008AAD87 /* SemanticShapeStylesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B7652699FA7B008AAD87 /* SemanticShapeStylesView.swift */; };
+		0E74B7692699FA8A008AAD87 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B7682699FA8A008AAD87 /* AnimationView.swift */; };
+		0E74B76C2699FA99008AAD87 /* GeometryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74B76B2699FA99008AAD87 /* GeometryView.swift */; };
 		0ED2552F268AF05F00B07C21 /* SwiftUIComponentsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED2552E268AF05F00B07C21 /* SwiftUIComponentsApp.swift */; };
 		0ED25531268AF05F00B07C21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED25530268AF05F00B07C21 /* ContentView.swift */; };
 		0ED25533268AF06000B07C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ED25532268AF06000B07C21 /* Assets.xcassets */; };
@@ -34,6 +41,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E74B7582699FA3A008AAD87 /* ImmediateModeDrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmediateModeDrawingView.swift; sourceTree = "<group>"; };
+		0E74B75C2699FA4B008AAD87 /* ShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesView.swift; sourceTree = "<group>"; };
+		0E74B75F2699FA5B008AAD87 /* TransformedShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformedShapesView.swift; sourceTree = "<group>"; };
+		0E74B7622699FA6C008AAD87 /* ShapeStylesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeStylesView.swift; sourceTree = "<group>"; };
+		0E74B7652699FA7B008AAD87 /* SemanticShapeStylesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemanticShapeStylesView.swift; sourceTree = "<group>"; };
+		0E74B7682699FA8A008AAD87 /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		0E74B76B2699FA99008AAD87 /* GeometryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryView.swift; sourceTree = "<group>"; };
 		0ED2552B268AF05F00B07C21 /* SwiftUIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED2552E268AF05F00B07C21 /* SwiftUIComponentsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsApp.swift; sourceTree = "<group>"; };
 		0ED25530268AF05F00B07C21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +88,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E74B7572699F951008AAD87 /* DrawingAndAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				0E74B7582699FA3A008AAD87 /* ImmediateModeDrawingView.swift */,
+				0E74B75C2699FA4B008AAD87 /* ShapesView.swift */,
+				0E74B75F2699FA5B008AAD87 /* TransformedShapesView.swift */,
+				0E74B7622699FA6C008AAD87 /* ShapeStylesView.swift */,
+				0E74B7652699FA7B008AAD87 /* SemanticShapeStylesView.swift */,
+				0E74B7682699FA8A008AAD87 /* AnimationView.swift */,
+				0E74B76B2699FA99008AAD87 /* GeometryView.swift */,
+			);
+			path = DrawingAndAnimation;
+			sourceTree = "<group>";
+		};
 		0ED25522268AF05F00B07C21 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +144,7 @@
 		0ED25546268B9E4000B07C21 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0E74B7572699F951008AAD87 /* DrawingAndAnimation */,
 				0ED25569268CD62D00B07C21 /* ViewsAndControls */,
 				0ED25568268CD61000B07C21 /* LayoutAndPresentation */,
 			);
@@ -225,23 +254,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E74B7632699FA6C008AAD87 /* ShapeStylesView.swift in Sources */,
+				0E74B7592699FA3A008AAD87 /* ImmediateModeDrawingView.swift in Sources */,
 				0ED2554F268B9E8100B07C21 /* ControlsView.swift in Sources */,
+				0E74B7602699FA5B008AAD87 /* TransformedShapesView.swift in Sources */,
 				0ED2554C268B9E6A00B07C21 /* ButtonsView.swift in Sources */,
 				0ED25531268AF05F00B07C21 /* ContentView.swift in Sources */,
+				0E74B7692699FA8A008AAD87 /* AnimationView.swift in Sources */,
 				0ED25541268B97AD00B07C21 /* TextsView.swift in Sources */,
 				0ED25575268CD6B300B07C21 /* ContainersView.swift in Sources */,
 				0ED2555B268B9EE100B07C21 /* InfrequentlyUsedViewsView.swift in Sources */,
 				0ED2552F268AF05F00B07C21 /* SwiftUIComponentsApp.swift in Sources */,
 				0ED25581268CD71200B07C21 /* HierarchicalViewsView.swift in Sources */,
+				0E74B76C2699FA99008AAD87 /* GeometryView.swift in Sources */,
 				0ED2556F268CD68C00B07C21 /* LazyStacksView.swift in Sources */,
 				0ED25578268CD6D100B07C21 /* ScrollViewsView.swift in Sources */,
 				0ED25558268B9EBF00B07C21 /* LocalizationView.swift in Sources */,
+				0E74B7662699FA7B008AAD87 /* SemanticShapeStylesView.swift in Sources */,
 				0ED2557B268CD6E500B07C21 /* ListsView.swift in Sources */,
 				0ED2556B268CD65D00B07C21 /* StacksView.swift in Sources */,
 				0ED25555268B9EAC00B07C21 /* ValueIndicatorsView.swift in Sources */,
 				0ED25584268CD73400B07C21 /* ScheduledViewUpdatesView.swift in Sources */,
 				0ED25587268CD74B00B07C21 /* SpacersAndDividersView.swift in Sources */,
 				0ED2557E268CD6F000B07C21 /* TablesView.swift in Sources */,
+				0E74B75D2699FA4B008AAD87 /* ShapesView.swift in Sources */,
 				0ED25544268B97DB00B07C21 /* HeaderView.swift in Sources */,
 				0ED25548268B9E5700B07C21 /* ImagesView.swift in Sources */,
 				0ED25572268CD6A100B07C21 /* GridsView.swift in Sources */,

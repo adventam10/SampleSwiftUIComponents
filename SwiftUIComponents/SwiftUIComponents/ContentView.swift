@@ -87,6 +87,40 @@ enum LayoutAndPresentationMenu: Int, CaseIterable, Identifiable {
     }
 }
 
+enum DrawingAndAnimationMenu: Int, CaseIterable, Identifiable {
+
+    case immediateModeDrawing
+    case shapes
+    case transformedShapes
+    case shapeStyles
+    case semanticShapeStyles
+    case animation
+    case geometry
+
+    var title: String {
+        switch self {
+        case .immediateModeDrawing:
+            return "Immediate Mode Drawing"
+        case .shapes:
+            return "Shapes"
+        case .transformedShapes:
+            return "Transformed Shapes"
+        case .shapeStyles:
+            return "Shape Styles"
+        case .semanticShapeStyles:
+            return "Semantic Shape Styles"
+        case .animation:
+            return "Animation"
+        case .geometry:
+            return "Geometry"
+        }
+    }
+
+    var id: Int {
+        return rawValue
+    }
+}
+
 struct ContentView: View {
 
     var body: some View {
@@ -99,6 +133,11 @@ struct ContentView: View {
                 }
                 Section(header: Text("View Layout and Presentation")) {
                     ForEach(LayoutAndPresentationMenu.allCases) { menu in
+                        self.containedView(menu: menu)
+                    }
+                }
+                Section(header: Text("Drawing and Animation")) {
+                    ForEach(DrawingAndAnimationMenu.allCases) { menu in
                         self.containedView(menu: menu)
                     }
                 }
@@ -149,6 +188,25 @@ struct ContentView: View {
             return AnyView(NavigationLink(destination: ScheduledViewUpdatesView()) { Text(menu.title) })
         case .spacersAndDividers:
             return AnyView(NavigationLink(destination: SpacersAndDividersView()) { Text(menu.title) })
+        }
+    }
+
+    private func containedView(menu: DrawingAndAnimationMenu) -> AnyView {
+        switch menu {
+        case .immediateModeDrawing:
+            return AnyView(NavigationLink(destination: ImmediateModeDrawingView()) { Text(menu.title) })
+        case .shapes:
+            return AnyView(NavigationLink(destination: ShapesView()) { Text(menu.title) })
+        case .transformedShapes:
+            return AnyView(NavigationLink(destination: TransformedShapesView()) { Text(menu.title) })
+        case .shapeStyles:
+            return AnyView(NavigationLink(destination: ShapeStylesView()) { Text(menu.title) })
+        case .semanticShapeStyles:
+            return AnyView(NavigationLink(destination: SemanticShapeStylesView()) { Text(menu.title) })
+        case .animation:
+            return AnyView(NavigationLink(destination: AnimationView()) { Text(menu.title) })
+        case .geometry:
+            return AnyView(NavigationLink(destination: GeometryView()) { Text(menu.title) })
         }
     }
 }
