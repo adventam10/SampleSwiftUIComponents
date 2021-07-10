@@ -9,7 +9,30 @@ import SwiftUI
 
 struct SpacersAndDividersView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).navigationTitle("Spacers and Dividers")
+        VStack {
+            HeaderView(text: "Spacer")
+            HStack {
+                Spacer()
+                Image(systemName: "checkmark")
+                Text("name")
+            }
+            .border(Color.blue)
+
+            HeaderView(text: "Divider")
+            HStack {
+                Image(systemName: "checkmark")
+                Divider()
+                Text("name")
+                Divider()
+                VStack {
+                    Divider()
+                    Image(systemName: "checkmark")
+                    Divider()
+                    Text("name")
+                    Divider()
+                }
+            }
+        }.navigationTitle("Spacers and Dividers")
     }
 }
 
