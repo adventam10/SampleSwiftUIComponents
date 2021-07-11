@@ -11,8 +11,9 @@ struct ImmediateModeDrawingView: View {
 
     var body: some View {
         VStack {
-            HeaderView(text: "Text")
-            Text("Hello, world!")
+            Text("iOS15以上なので割愛")
+            // Canvas（iOS15以上）
+            // GraphicsContext（iOS15以上）
         }.navigationTitle("Immediate Mode Drawing")
     }
 }
