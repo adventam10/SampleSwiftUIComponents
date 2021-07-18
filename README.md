@@ -26,3 +26,12 @@ SwiftUI のコンポーネントサンプル集。
 |Lists|Hierarchical Views|
 |---|---|
 |![lists](https://user-images.githubusercontent.com/34936885/125163060-3d1cbd80-e1c6-11eb-878d-f2fe1c83ea04.png)|![hierarchical](https://user-images.githubusercontent.com/34936885/125162848-1b6f0680-e1c5-11eb-86fa-dd42ba05bfdf.gif)|
+
+## Drawing and Animation
+|Shapes|Transformed Shapes|Shape Styles|
+|---|---|---|
+|![shapes](https://user-images.githubusercontent.com/34936885/125488939-40182a50-d663-42bc-a6b4-08990d4b0522.png)|![transformed](https://user-images.githubusercontent.com/34936885/125488777-beaa325b-38db-48bb-8e52-1e7e52307fe6.png)|![shape_styles](https://user-images.githubusercontent.com/34936885/126035892-a54bb86d-1cc7-45c3-9913-93fb0b46cc59.png)|
+
+|Animation|
+|---|
+|![animation](https://user-images.githubusercontent.com/34936885/126061534-73522a31-36b9-4c39-8cdf-75b57a8d740a.gif)|
